@@ -117,17 +117,37 @@ class NodeSegment extends React.Component {
                         <Progress percent={score} size='medium'>
                             Score
                         </Progress>
-                        {false && this.state.score != null && <div>
-                            <div>CPU score: {this.state.score['cpu_zero']} -> {this.state.score['cpu_full']}</div>
-                            <div>VM score: {this.state.score['vm_zero']} -> {this.state.score['vm_full']}</div>
-                            <div>TIMER score: {this.state.score['timer_zero']} -> {this.state.score['timer_full']}</div>
-                        </div>
-                        }
                         <br/>
                         <Label size="large">
                             CPU steal
                             <Label.Detail><b>{ this.state.cpu_steal }</b></Label.Detail>
                         </Label>
+                        <br/>
+                        <br/>
+                        {
+                            this.state.score != null &&
+                            <div>
+                                <div>
+                                    <div style={{"display": "inline-block", "min-width": "7em"}}><b>CPU</b> score:</div>
+                                    <div style={{"display": "inline-block", "min-width": "5em", "text-align": "right"}}>{this.state.score['cpu_zero']}</div>
+                                    <div style={{"display": "inline-block", "min-width": "2em", "text-align": "center"}}>-></div>
+                                    <div style={{display: "inline-block"}}>{this.state.score['cpu_full']}</div>
+                                </div>
+                                <div>
+                                    <div style={{"display": "inline-block", "min-width": "7em"}}><b>VM</b> score:</div>
+                                    <div style={{"display": "inline-block", "min-width": "5em", "text-align": "right"}}>{this.state.score['vm_zero']}</div>
+                                    <div style={{"display": "inline-block", "min-width": "2em", "text-align": "center"}}>-></div>
+                                    <div style={{"display": "inline-block", "min-width": "5em"}}>{this.state.score['vm_full']}</div>
+                                </div>
+                                <div>
+                                    <div style={{"display": "inline-block", "min-width": "7em"}}><b>TIMER</b> score:</div>
+                                    <div style={{"display": "inline-block", "min-width": "5em", "text-align": "right"}}>{this.state.score['timer_zero']}</div>
+                                    <div style={{"display": "inline-block", "min-width": "2em", "text-align": "center"}}>-></div>
+                                    <div style={{"display": "inline-block", "min-width": "5em"}}>{this.state.score['timer_full']}</div>
+                                </div>
+                            </div>
+                        }
+
                     </Grid.Column>
                 </Grid>
             </Segment>
