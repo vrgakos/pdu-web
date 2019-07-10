@@ -1,8 +1,7 @@
 import React from 'react'
-import { Button, Segment, Grid, Header, List, Icon, Item } from 'semantic-ui-react'
 
 import { CustomMessage, Navbar } from 'components'
-import { Home, Pods } from 'routes'
+import { Home, Clients } from 'routes'
 
 import { Switch, Route, Link } from 'react-router-dom'
 
@@ -11,8 +10,8 @@ import 'styling/semantic.less'
 const leftItems = [
   {
     as: Link,
-    to: '/pods',
-    content: 'Pods',
+    to: '/clients',
+    content: 'Clients',
     icon: 'book',
     key: 'docs',
   },
@@ -40,7 +39,7 @@ const App = () => (
     <main>
         <Switch>
             <Route exact path='/' component={Home} />
-            <Route path='/pods' component={Pods} />
+            <Route path='/clients' component={Clients} />
         </Switch>
     </main>
 </div>

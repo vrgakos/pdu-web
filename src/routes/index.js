@@ -1,2 +1,2 @@
 export Home from './Home'
-export Pods from './Pods'
+export Clients from './Clients'
