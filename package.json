@@ -5,7 +5,7 @@
   "description": "Get started with Semantic UI React and Webpack 3",
   "dependencies": {
     "apexcharts": "^2.2.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "moment": "^2.22.2",
     "react": "^16.2.0",
     "react-apexcharts": "^1.0.10",
